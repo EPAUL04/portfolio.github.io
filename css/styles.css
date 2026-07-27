@@ -87,6 +87,20 @@ main a {
 main a:hover {
     border-color: #689a8d;
 }
+.scrollbox {
+    overflow: hidden;
+}
+.scrollbox.scrollable {
+    overflow: scroll;
+}
+button.scrollButton {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    display: none;
+}
 main #one-col {
     margin: 25px;
     margin-top: 0;
@@ -95,7 +109,6 @@ main #one-col {
     border: solid 2px #52796F;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
     height: 75vh;
-    overflow: scroll;
 }
 main #one-col ul {
     padding-left: 50px;
@@ -116,7 +129,6 @@ main #two-cols > #one {
     padding-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
     height: 75vh;
-    overflow: scroll;
 }
 main #two-cols > #two {
     background-color: white;
@@ -126,7 +138,6 @@ main #two-cols > #two {
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
     padding-bottom: 20px;
     height: 75vh;
-    overflow: scroll;
 }
 main #three-cols {
     display: grid;
@@ -142,7 +153,6 @@ main #three-cols > #one, main #three-cols > #four {
     padding-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
     height: 50vh;
-    overflow: scroll;
 }
 main #three-cols > #two, main #three-cols > #five {
     background-color: white;
@@ -152,7 +162,6 @@ main #three-cols > #two, main #three-cols > #five {
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
     padding-bottom: 20px;
     height: 50vh;
-    overflow: scroll;
 }
 main #three-cols > #three, main #three-cols > #six {
     background-color: white;
@@ -162,7 +171,6 @@ main #three-cols > #three, main #three-cols > #six {
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
     padding-bottom: 20px;
     height: 50vh;
-    overflow: scroll;
 }
 main #three-fourths {
     grid-column: 1 / span 3;
