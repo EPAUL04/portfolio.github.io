@@ -9,6 +9,7 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* contains header and makes it look better with nav bar! */
 #box {
     position: sticky;
     top: 0;
@@ -60,16 +61,27 @@ nav ul li a.highlighted {
 nav ul li a:hover {
     box-shadow: none;
 }
-nav ul li a:hover.highlighted {
-    /* box-shadow: none; */
 
+/* for responsive design lol */
+.larger {
+    display: block; /*TODO: figure out if this is causing problems for grid */
+}
+#three-cols.larger {
+    display: grid;
+}
+.smaller, .mobileDropdown {
+    display: none;
 }
 
 main {
     clear: both;
     background-color: #52796F;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+main img {
+    float: left; 
+    display: inline;
 }
 main ul {
     margin-left: 20px;
@@ -87,20 +99,27 @@ main a {
 main a:hover {
     border-color: #689a8d;
 }
+/* scrollbox is a class for each 'scrolling box' grid element */
 .scrollbox {
     overflow: hidden;
 }
+.scrollbox a {
+    /* display: none; */
+    max-height: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
+.scrollbox:hover a {
+    /* display: block; */
+    max-height: 15px;
+    transition: 0.5s linear;
+}
+/* scrollable is a class assigned in the js to facilitate boxes only being scrollable on click */
 .scrollbox.scrollable {
     overflow: scroll;
 }
-button.scrollButton {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-    display: none;
-}
+
+/* grid layout stuff yayyyy */
 main #one-col {
     margin: 25px;
     margin-top: 0;
@@ -108,7 +127,7 @@ main #one-col {
     background-color: white;
     border: solid 2px #52796F;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
-    height: 75vh;
+    min-height: 80vh;
 }
 main #one-col ul {
     padding-left: 50px;
@@ -179,6 +198,8 @@ main #three-fourths {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     padding-bottom: 20px;
 }
+
+/* other main stuff not related to grid layout */
 main form input {
     display: block;
     line-height: 2em;
@@ -221,7 +242,8 @@ footer a:hover {
 }
 
 
-/* media queries */
+/* ============================================ media queries ================================================*/
+/* MEDIUM SIZE */
 @media (max-width: 800px) {
     main #two-cols {
         /* remove 2 col layout */
@@ -239,18 +261,44 @@ footer a:hover {
     }
 }
 
+/* MOBILE SIZE */
 @media (max-width: 600px) {
     nav {
-        top: 0;
+        top: 1.75em;
     }
 
     nav ul li a {
-        padding: 5px 10px 5px 10px;
+        padding: 5px 5px;
+        margin: 0 18px;
         font-size: small;
     }
 
-    #headshot img {
-        width: 75%;
-        margin-left: 12.5%;
+    main img {
+        display: none;
+    }
+    /* for home page layout switch, removes photo and condenses stuff */
+    .smaller {
+        display: block;
+    }
+    .larger, #three-cols.larger {
+        display: none;
+    }
+    #mini {
+        background-color: white;
+        border: solid 2px #52796F;
+        padding: 25px;
+        padding-bottom: 20px;
+        margin: 0px 15px;
+        box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
+    }
+    #mini p {
+        display: none;
+    }
+    #mini p.show {
+        display: block;
+    }
+
+    #one-col.larger {
+        display: none;
     }
 }

@@ -24,12 +24,10 @@
         </div>
         
         <main>
-            <div id="three-cols">
+            <div id="three-cols" class="larger">
                 <div id="one" class="scrollbox" onclick="makeScrollable('one')">
                     <h3 style="float: left;">EvaCun2025</h3>
-                    <p id="one.more" style="float: right; color: #9eb5af;">
-                        Click to read more!
-                    </p>
+                    <a id="one.more" style="float: right; color: #9eb5af;">(click to read more)</a>
                     <p style="clear: both;">
                         The first project I got involved in was the EvaCun2025 Shared Task on Lemmatization of Ancient Cuneiform 
                         Languages, a workshop associated with the Ancient Language Processing sector of the NAACL conference. I 
@@ -52,9 +50,7 @@
                 
                 <div id="two" class="scrollbox" onclick="makeScrollable('two')">
                     <h3 style="float: left;">DARLing Lab</h3>
-                    <p id="two.more" style="float: right; color: #9eb5af;">
-                        Click to read more!
-                    </p>
+                    <a id="two.more" style="float: right; color: #9eb5af;">(click to read more)</a>
                     <p style="clear: both;">
                         Since April 2025, I have been working as a member of the DARLing lab (Documentation, Analysis, and 
                         Revitalization), I work with the Hän language under the guidance of Maura O'Leary. We are working 
@@ -77,9 +73,7 @@
 
                 <div id="three" class="scrollbox" onclick="makeScrollable('three')">
                     <h3 style="float: left;">KIND Lab</h3>
-                    <p id="three.more" style="float: right; color: #9eb5af;">
-                        Click to read more!
-                    </p>
+                    <a id="three.more" style="float: right; color: #9eb5af;">(click to read more)</a>
                     <p style="clear: both;">
                         In December 2025, I joined Dr. Yasmine Elglaly's KIND Lab, which focuses on accessibility in 
                         computing. The project I work on within the lab is using research-based strategies to develop 
@@ -103,9 +97,7 @@
 
                 <div id="four" class="scrollbox" onclick="makeScrollable('four')">
                     <h3 style="float: left;">SIGSE TS 2027</h3>
-                    <p id="four.more" style="float: right; color: #9eb5af;">
-                        Click to read more!
-                    </p>
+                    <a id="four.more" style="float: right; color: #9eb5af;">(click to read more)</a>
                     <p style="clear: both;">
                         Tyanin and our instructor, Yasmine Elglaly, obtained a grant alongside Bedour Alshaigy to work 
                         on this project, which involves studying the ways that neurodivergent students interact with 
@@ -132,9 +124,7 @@
 
                 <div id="five" class="scrollbox" onclick="makeScrollable('five')">
                     <h3 style="float: left;">MedAI</h3>
-                    <p id="five.more" style="float: right; color: #9eb5af;">
-                        Click to read more!
-                    </p>
+                    <a id="five.more" style="float: right; color: #9eb5af;">(click to read more)</a>
                     <p style="clear: both;">
                         Dr. Moushumi Sharmin started this project as a response to her previous work, which investigated the 
                         ability of sex workers in Bangladesh to access healthcare. The goal of the MedAI project is to create 
@@ -160,7 +150,7 @@
                 </div>
 
                 <div id="six" style="background-color:rgb(213, 213, 213);" class="scrollbox" onclick="makeScrollable('six')">
-                    <h3>Thoughts on GenAI <button style="padding: 0 3px; float: right;" onclick="dropdown()">⏷</button></h3>
+                    <h3>Thoughts on GenAI <button style="padding: 0 3px; float: right;" onclick="dropdown('ai')">⏷</button></h3>
                     <p id="ai">
                         Despite becoming involved with many projects that involve generative AI, I have complicated feelings 
                         about AI and tend to be against the use of generative AI. Part of my concern comes from the societal 
@@ -176,9 +166,146 @@
                     </p>
                 </div>
             </div>
+            
+            <!-- FOR MOBILE VIEW -->
+            <div id="mini"> <span class="smaller">
+                <button style="padding: 0 3px; float: right;" onclick="dropdownmega()">(expand all dropdowns) ⏷</button>
+                <br><br>
+                <h3>EvaCun2025 <button style="padding: 0 3px; float: right;" onclick="dropdown('eva')">⏷</button></h3>
+                <p id="eva">
+                    The first project I got involved in was the EvaCun2025 Shared Task on Lemmatization of Ancient Cuneiform 
+                    Languages, a workshop associated with the Ancient Language Processing sector of the NAACL conference. I 
+                    worked with two colleagues on this task, Brandi Wilkins and John Sbur, under the guidance of Dr. Yudong 
+                    Liu. This task involved using ChatGPT 4.0-Mini to lemmatize ancient cuneiform languages, which we did 
+                    through the use of data processing and prompt engineering. I worked on the implementation of data 
+                    processing infrastructure, performed data analysis, and helped build our conceptual model based off of 
+                    successes in previous research by Dr. Liu as well as our own ideas. 
+                    <br>
+                    We submitted our <a href="https://aclanthology.org/2025.alp-1.31/">paper</a> to the conference, 
+                    and were invited to attend in April of 2025. At this conference, we got a chance to present our work 
+                    and connect with other academics to learn about their methodologies on the same project. We attended
+                    talks and events to learn about new research and publications in the fields of AI and NLP. 
+                    This experience introduced me to the world of academic research, and also helped me inform my own views 
+                    on hot topics in the CS industry, like AI and ML. Our source code can be found 
+                    <a href="https://github.com/ScratchyPirate/EvaCunWWURepository">here</a>.
+                </p>
+
+                <br>
+
+                <h3>DARLing Lab <button style="padding: 0 3px; float: right;" onclick="dropdown('darling')">⏷</button></h3>
+                <p id="darling">
+                    Since April 2025, I have been working as a member of the DARLing lab (Documentation, Analysis, and 
+                    Revitalization), I work with the Hän language under the guidance of Maura O'Leary. We are working 
+                    to preserve this endangered language and expand access to language-learning materials. I am part 
+                    of the Transducer team, where we work on maintaining a morphological transducer that breaks a Hän 
+                    word into its English counterpart and inflectional morphemes, or takes an English word and attaches 
+                    the inflectional morphemes to form the proper Hän word. This maintenance involves the entry of 
+                    data from a dictionary into the transducer through the use of lexd, as well as checking the format
+                    of existing and new entries to the transducer. We also analyze verb paradigms to add verb entries 
+                    to the transducer, using different data from the charts to assess which morphological rules can 
+                    apply to the given verb. 
+                    <br>
+                    Since September 2025, I have worked as a lab manager with the DARLing lab, I have been helping 
+                    onboard new members and prepare them for the research assistant role. I have also been working 
+                    on documentation, making sure that we have guides and FAQ documents for various parts of the lab 
+                    to help speed up the onboarding process.
+                </p>
+            
+                <br>
+
+                <h3>KIND Lab <button style="padding: 0 3px; float: right;" onclick="dropdown('kind')">⏷</button></h3>
+                <p id="kind">
+                    In December 2025, I joined Dr. Yasmine Elglaly's KIND Lab, which focuses on accessibility in 
+                    computing. The project I work on within the lab is using research-based strategies to develop 
+                    an educational game called You&I for use by speech and language pathology practitioners with 
+                    young children diagnosed with ASD, specifically children that experience pronoun reversal. I have 
+                    worked with Tyanin Opdahl to finish a paper investigating prior research and presenting her 
+                    previously conducted survey, which resulted in design recommendations from speech language 
+                    pathology professionals and other professionals that work with young autistic individuals, 
+                    such as Special Education teachers in elementary schools. Currently, I work with Tyanin and Ryan 
+                    Critchlow to conduct a pilot study in which the first level of the implemented game is being 
+                    tested with young children with ASD, which eventually will result in recommendations for our 
+                    next steps, which will shape how future implementation of the game goes before the final result 
+                    is published. I am working on this project as my Senior Research capstone for the CS Department  
+                    with my colleagues Kayla Warner and Rizon Takabe. We will be helped rewrite the code and design 
+                    and implement 2-3 new levels alongside several minigames. We will write a paper and present our 
+                    findings, which will pertain to how this educational game can help young children with autism in 
+                    their speech development, and what features are important for other educational games with this 
+                    goal to implement.
+                </p>
+
+                <br>
+
+                <h3>SIGSE TS 2027 <button style="padding: 0 3px; float: right;" onclick="dropdown('sigse')">⏷</button></h3>
+                <p id="sigse">
+                    Tyanin and our instructor, Yasmine Elglaly, obtained a grant alongside Bedour Alshaigy to work 
+                    on this project, which involves studying the ways that neurodivergent students interact with 
+                    generative AI for academic purposes. The three of them designed a study to investigate this 
+                    relationship, which involved having neurodivergent introductory CS students perform a recursion-based 
+                    coding task. The students were given the option to use ChatGPT, which was set up in another window 
+                    logged into a blank account created by the researcher. This study was run by Tyanin and Yasmine at 
+                    our university, but the sister study run by Bedour at Uppsala University was unable to be completed.
+                    <br>
+                    They compiled the results of that study into a set of materials which became the basis for the second 
+                    part of the project -- a focus group of instructors. This focus group would be asked to read through 
+                    the materials provided (a record of the chatlog interspersed with updated screenshots of the 
+                    participant's code) and annotate with observations and opinions. They were asked to give their ideas 
+                    on how ChatGPT was a benefit or detriment for the user, how helpful were ChatGPT's responses, and how 
+                    would they have responded differently as an instructor, all with particular consideration for the role
+                    neurodivergence plays in the interaction. Then, the group was asked to discuss 
+                    their thoughts and opinions. Finally, they were asked to design a prototype tool that would improve 
+                    ChatGPT's effectiveness as a tutor. Sophia Sloane and I helped run this focus group, synthesize and 
+                    analyze the findings, and write the part of the paper about the focus group. This paper has been 
+                    submitted to the SIGSE TS 2027 committee for review. 
+                </p>
+
+                <br>
+
+                <h3>MedAI <button style="padding: 0 3px; float: right;" onclick="dropdown('medai')">⏷</button></h3>
+                <p id="medai">
+                    Dr. Moushumi Sharmin started this project as a response to her previous work, which investigated the 
+                    ability of sex workers in Bangladesh to access healthcare. The goal of the MedAI project is to create 
+                    a pipeline that connects an app to an AI chatbot, connecting volunteer doctors to these workers with 
+                    the AI chatbot acting as a tool to help reduce the load on either party. The app provides a simple 
+                    interface for 'patient' and doctor users, which can accept audio and visual input. This information 
+                    is translated from Bengali/Bangla to English, then passed to an AI chatbot API. This chatbot analyzes 
+                    image data, summarizes the translated transcript of the audio data, and proposes diagnoses. This is 
+                    immediately sent to a volunteer doctor, who is asked to review the summary and analysis to ensure that 
+                    nothing is missed and that appropriate medical advice is conveyed to the patient. The patient and doctor 
+                    are put in contact to facilitate follow-up questions on either end. The doctor's feedback is sent back 
+                    to the patient for review. This project is currently in its beginning stages. <br>
+                
+                    I have been working within the image detection subgroup, where we are working on a literature review 
+                    to handle the inequital results of image detection in dermatological models pertaining to skin color 
+                    and the model's ability to properly interpret and diagnose skin conditions. We are working with the
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-72378-0_37" target="_blank">previous work </a> 
+                    of Aayushman et al, which proposes a strategy for reducing this inequity to make a more effective medical
+                    tool. This approach will shape our image detection and help the pipeline more accurately convey the
+                    patient's condition to the doctor.
+                </p>
+
+                <br>
+
+                <h3>Thoughts on GenAI <button style="padding: 0 3px; float: right;" onclick="dropdown('genai')">⏷</button></h3>
+                <p id="genai">
+                    Despite becoming involved with many projects that involve generative AI, I have complicated feelings 
+                    about AI and tend to be against the use of generative AI. Part of my concern comes from the societal 
+                    inequity inherent to this field due to social bias encoded in web-scraped training data, privacy concerns,
+                    social inequalities in accessing generative AI (e.g. most genAI tools being primarily in English), and 
+                    the inequitable climate impact. The climate impact itself is a major concern, as data centers use large 
+                    amounts of both water for cooling and energy. However, I recognize that AI is a powerful tool and can 
+                    be used to do or elevate good work being done, and that other forms of computing also have similar social 
+                    and environmental impacts. Overall, I have developed the position that AI should be used very cautiously 
+                    with thorough consideration of its various impacts, and should not be used for trivial tasks or tasks 
+                    that do not have an inherent social benefit. (For example, I would not repeat my participation in the 
+                    EvaCun2025 shared task due to its reliance on genAI, though I learned a lot and found it very rewarding).
+                </p>
+
+                </span> <!-- refers to the 'smaller' class -->
+            </div> <!--refers to the 'mini' div-->
         </main>
         <footer>
-            <p>io ✩ date updated: 07.27.2026 ✩ contact me via <a href="mailto:eandepaul@gmail.com">email</a>, 
+            <p>last updated: 07.27.2026 ✩ contact me via <a href="mailto:eandepaul@gmail.com">email</a>, 
                         <a href="https://www.linkedin.com/in/elizabeth-h-paul/">LinkedIn</a>, or 
                         <a href="https://app.joinhandshake.com/profiles/ppnm3v">Handshake</a>!</p>
         </footer>
