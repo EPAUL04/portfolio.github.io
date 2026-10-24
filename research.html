@@ -156,9 +156,9 @@
                     </p>
                 </div>
 
-                <div id="six" style="background-color:rgb(213, 213, 213);" class="scrollbox" onclick="makeScrollable('six')">
+                <!-- <div id="six" style="background-color:rgb(213, 213, 213);" class="scrollbox" onclick="makeScrollable('six')">
                     <h3>Thoughts on GenAI <button style="padding: 0 3px; float: right;" onclick="dropdown('ai')">⏷</button></h3>
-                    <!-- <p id="ai">
+                    <p id="ai">
                         Despite becoming involved with many projects that involve generative AI, I have complicated feelings 
                         about AI and tend to be against the use of generative AI. Part of my concern comes from the societal 
                         inequity inherent to this field due to social bias encoded in web-scraped training data, privacy concerns,
@@ -170,13 +170,23 @@
                         with thorough consideration of its various impacts, and should not be used for trivial tasks or tasks 
                         that do not have an inherent social benefit. (For example, I would not repeat my participation in the 
                         EvaCun2025 shared task due to its reliance on genAI, though I learned a lot and found it very rewarding).
-                    </p> -->
+                    </p>
+                    OR
                     <p id="ai">
                         In my personal life, I prefer to avoid the use of generative AI
                         whenever possible. However, I recognize that AI is a powerful tool and can 
                         be used to do or elevate good and impactful work. There are certain projects that I would not repeat my 
                         involvement in due to their genAI usage, specifically the EvaCun2025 project, but am willing 
                         to use genAI if given a very good reason or for projects that has an inherently positive social impact.
+                    </p>
+                </div> -->
+                <div id="six" class="scrollbox" onclick="makeScrollable('six')">
+                    <h3 style="float: left;">Publications</h3>
+                    <a id="six.more" style="float: right; color: #9eb5af;">(click to read more)</a>
+                    <p style="clear: both; text-indent: 0">
+                        - Paul, E. H., Wilkins, B., & Sbur, J. (2025). EvaCun2025: A Shared Task for Lemmatization of Ancient Cuneiform Languages. In Proceedings of the 2025 Workshop on Ancient Language Processing (ALP 2025). 10.18653/v1/2025.alp-1.31
+                        <br>- Manuscript under review, ACM Transactions on Accessible Computing (TACCESS), 2026
+                        <br>- Manuscript under review, ACM Technical Symposium on Computer Science Education (SIGSE), 2026
                     </p>
                 </div>
             </div>
@@ -311,14 +321,23 @@
 
                 <br>
 
-                <h3>Thoughts on GenAI <button style="padding: 0 3px; float: right;" onclick="dropdown('genai')">⏷</button></h3>
+                <h3>Publications <button style="padding: 0 3px; float: right;" onclick="dropdown('pubs')">⏷</button></h3>
+                <p id="pubs" style="text-indent: 0;">
+                    - Paul, E. H., Wilkins, B., & Sbur, J. (2025). EvaCun2025: A Shared Task for Lemmatization of Ancient Cuneiform Languages. In Proceedings of the 2025 Workshop on Ancient Language Processing (ALP 2025). 10.18653/v1/2025.alp-1.31
+                    <br>- Manuscript under review, ACM Transactions on Accessible Computing (TACCESS), 2026
+                    <br>- Manuscript under review, ACM Technical Symposium on Computer Science Education (SIGSE), 2026
+                </p>
+
+                <br>
+
+                <!-- <h3>Thoughts on GenAI <button style="padding: 0 3px; float: right;" onclick="dropdown('genai')">⏷</button></h3>
                 <p id="genai">
                     In my personal life, I prefer to avoid the use of generative AI
                     whenever possible. However, I recognize that AI is a powerful tool and can 
                     be used to do or elevate good and impactful work. There are certain projects that I would not repeat my 
                     involvement in due to their genAI usage, specifically the EvaCun2025 project, but am willing 
                     to use genAI if given a very good reason or for projects that has an inherently positive social impact.
-                </p>
+                </p> -->
 
                 </span> <!-- refers to the 'smaller' class -->
             </div> <!--refers to the 'mini' div-->

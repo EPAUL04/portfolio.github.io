@@ -8,7 +8,8 @@ function dropdownmega() {
     dropdown("kind");
     dropdown("sigse");
     dropdown("medai");
-    dropdown("genai");
+    dropdown("pubs");
+    // dropdown("genai");
 }
 
 function makeScrollable(name) {

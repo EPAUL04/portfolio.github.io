@@ -134,7 +134,7 @@ main #one-col ul {
 }
 main #two-cols {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 25px;
     margin-top: 0;
     padding: 25px;
@@ -151,7 +151,7 @@ main #two-cols > #one {
 }
 main #two-cols > #two {
     background-color: white;
-    grid-column: 3 / span 2;
+    grid-column: 3 / span 3;
     border: solid 2px #52796F;
     padding: 25px;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
@@ -246,6 +246,9 @@ footer a:hover {
 /* ============================================ media queries ================================================*/
 /* MEDIUM SIZE */
 @media (max-width: 800px) {
+    main {
+        min-height: 565px;
+    }
     main #two-cols {
         /* remove 2 col layout */
         display: block;
@@ -264,12 +267,16 @@ footer a:hover {
 
 /* MOBILE SIZE */
 @media (max-width: 600px) {
+    #box header h1 {
+        display: none;
+    }
+
     nav {
         top: 1.75em;
     }
 
     nav ul li a {
-        padding: 5px 5px;
+        padding: 5px;
         margin: 0 18px;
         font-size: small;
     }
@@ -281,16 +288,22 @@ footer a:hover {
     .smaller {
         display: block;
     }
+    #one-mobile, #two-mobile{
+        background-color: white;
+        margin: 0px -40px;
+        padding: 5px;
+        border-radius: 10px;
+        width: fit-content;
+    }
     .larger, #three-cols.larger {
         display: none;
     }
     #mini {
         background-color: white;
-        border: solid 2px #52796F;
         padding: 25px;
         padding-bottom: 20px;
-        margin: 0px 15px;
-        box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
+        margin: 0px 5px;
+        border-radius: 10px;
     }
     #mini p {
         display: none;
@@ -301,5 +314,10 @@ footer a:hover {
 
     #one-col.larger {
         display: none;
+    }
+
+    footer {
+        position: fixed;
+        margin-top: -25px;
     }
 }
