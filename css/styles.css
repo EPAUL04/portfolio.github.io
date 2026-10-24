@@ -219,7 +219,7 @@ main #ai.show {
 }
 
 footer {
-    font-size: small;
+    font-size: large;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -262,6 +262,10 @@ footer a:hover {
 
     nav ul li a {
         padding: 10px 20px 10px 20px;
+    }
+
+    footer {
+        font-size: medium;
     }
 }
 
@@ -319,5 +323,6 @@ footer a:hover {
     footer {
         position: fixed;
         margin-top: -25px;
+        font-size: small;
     }
 }
